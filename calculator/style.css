@@ -13,35 +13,35 @@ body{
 }
 
 button {
-    border-radius: 50%;
-    border: solid 1px #bdbdbd;
+    border-radius: 20%;
+    border: solid 1px rgb(197, 167, 167);
     cursor: pointer;
 }
 
 button:hover {
-    box-shadow: 1px 1px 1px 1px rgba(209, 209, 209, 0.55);
+    box-shadow: 1px 1px 1px 1px rgba(209, 209, 209, 0.7);
 }
 
 #caculator{
-    background-color: #ffffff;
+    background-color: #ffd8d6;
     display: flex;
     flex-direction: column;
     width: 297px;
-    border-radius: 5%;
-    border: 1px solid #000000;
+    border: 1px solid #943134;
 }
 
 #area-display{
-    background-color: #fafafa;
-    border-radius: 20%;
+    background-color: #ffe9e8;
     display: flex;
     flex-direction: column;
     text-align: right;
+    height: 90px;
     padding: 10px 10px;
 }
 
 #area-display #steps{
     font-size: 25px;
+    word-break: break-all;
 }
 
 #area-display #display{
@@ -68,12 +68,12 @@ button:hover {
     background-color: #fffccd;
 }
 
-.op, .interger, #reset, #btn_result {
-    background-color: #e3f2fd;
+.op, #interger, #reset, #btn_result {
+    background-color: #ffebee;
 }
 
-.op:hover, .interger:hover, #reset:hover, #btn_result:hover {
-    background-color: #d2ecff;
+.op:hover, #interger:hover, #reset:hover, #btn_result:hover {
+    background-color: #ffd0d7;
 }
 
 .off{

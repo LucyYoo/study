@@ -5,24 +5,27 @@ const $area_btn = document.querySelector('#area-btn');
 const data = {
     prev : '',
     curr : '',
-    operator: undefined,
-    pressedResult : false
+    operator: undefined
 
 }
 
 // 숫자 버튼을 누르는 경우
 function on_num(operator, target) {
-    const val = target.dataset.val;
     let prevOrcurr = operator ? 'curr' : 'prev';
-
+    const val = target.dataset.val;
     if(val === "-1") {
-        data[prevOrcurr] = Number(data[prevOrcurr])*-1 ;
-    } else {
+        if(data.curr !== '') {
+            data[prevOrcurr] = Number(data.curr)*-1 ;
+        } else{
+            data[[prevOrcurr]] = Number(data.prev)*-1 ;
+        }
+        
+    } else{
         data[prevOrcurr] += val;
-    } 
+    }
+
 
     $steps.innerHTML = data[prevOrcurr];
-
 }
 
 function on_ops(target){
@@ -34,21 +37,24 @@ function on_ops(target){
     if(data.prev === undefined) return;
     
     show_middleStep();
-    data.curr='';
-    data.pressedResult = false;
-
-    console.log(data);
 }
 
 function on_result(){
     if(data.prev === undefined || data.curr === undefined || data.operator === undefined) return;
-    data.pressedResult = true;
 
-    show_final();
     data.prev = cal_sum();
     $display.innerHTML = data.prev;
+    data.curr='';
 }
 
+function show_result(){
+    if(data.prev === undefined || data.curr === undefined || data.operator === undefined) return;
+
+    $display.classList.add('off');
+    data.prev = cal_sum();
+    $steps.innerHTML = data.prev;
+    data.curr='';
+}
 function cal_sum(){
     const {prev,curr,operator} = data;
     switch(operator){
@@ -77,11 +83,6 @@ function operator_to_String(){
     }
 }
 
-function show_final(){
-    const final = `${data.prev} ${operator_to_String()} ${data.curr}`;
-    $display.innerHTML = `${final} = `;
-}
-
 function show_middleStep(){
     const middleSteps = `${data.prev} ${operator_to_String()}`;
     $steps.innerHTML = middleSteps;
@@ -94,7 +95,6 @@ function on_reset(){
     $display.classList.add('off');
     $steps.innerHTML = '0';
     data.operator = undefined;
-    data.pressedResult = false;
 }
 
 $area_btn.addEventListener('click', (e) => {
@@ -115,8 +115,6 @@ $area_btn.addEventListener('click', (e) => {
     }
 
     if(target.id === 'btn_result') {
-        on_result();
+        show_result();
     }
-
-    
 });
