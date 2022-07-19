@@ -16,4 +16,3 @@ myMenu.addEventListener("click", haddleMenuDrop);
 
 window.addEventListener("click", closeMenu);
 
-
