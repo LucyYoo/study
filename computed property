@@ -1,0 +1,26 @@
+//1.
+let a = 'age';
+
+const User = {
+	name: 'Mike',
+    age : 30
+}
+
+//2.
+let a = 'age';
+
+const User = {
+	name: 'Mike',
+    [a] : 30 //age: 30
+}
+
+
+function makeObj(key, val){
+	return{
+    	[key]: val
+    };
+}
+
+const obj = makeObj("성별", "male");
+
+console.log(obj);
