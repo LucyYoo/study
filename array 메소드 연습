@@ -51,3 +51,57 @@ let newUserList = userList.map((user, index) => {
     	isAdult: user.age > 19,
     });
 });
+
+//arr.find(fn)/ arr.findIndex(fn)
+let arr = [1, 2, 3, 4, 5];
+
+const result = arr.find((item) => {
+	return item % 2 === 0;
+});
+
+console.log(result); //2
+
+let userList = [
+	{name: "Mike", age: 30},
+    {name: "Jane", age: 27},
+    {name: "Tom", age: 10}
+];
+
+const result = userList.find((user) => {
+	if(user.age < 19) {
+    	return true;
+    }
+    return false;
+})
+
+console.log(result);
+//{name: "Tom", age: 10}
+
+//arr.filter(fn)
+let arr = [1, 2, 3, 4, 5];
+
+const result = arr.filter((item) => {
+	return item % 2 === 0;
+});
+
+console.log(result);
+
+//[2, 4]
+
+//arr.join
+let arr = ["안녕", "나는", "철수야"];
+
+let result = arr.join();
+
+console.log(result);
+
+//안녕,나는,철수야
+
+//arr.split
+const user = "Mike,Jane,Tom,Tony";
+
+const result = users.split(",");
+
+console.log(result);
+
+//["Mike", "Jane", "Tom", "Tony"]
