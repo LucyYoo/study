@@ -105,3 +105,22 @@ const result = users.split(",");
 console.log(result);
 
 //["Mike", "Jane", "Tom", "Tony"]
+
+//arr.reduce()
+let userList = [
+	{name: "Mike", age: 30},
+    {name: "Tom", age: 10},
+    {name: "Jane", age: 27},
+    {name: "Sue", age: 26},
+    {name: "Harry", age: 42},
+    {name: "Steve", age: 15},
+];
+
+let result = userList.reduce((prev, curr) => {
+	if(curr.age > 19){
+    	prev.push(curr.name)
+    }
+     return prev;
+}, [])
+
+console.log(result);
