@@ -9,15 +9,27 @@ export default function TodoCount({ $target, initialState }) {
   this.state = initialState;
 
   this.setState = (nextState) => {
-    this.state = initialState;
+    this.state = nextState;
     this.render();
   };
 
   this.render = () => {
-    console.log(initialState.length);
+    let count = 0;
+    this.state.forEach((todo) => {
+      if (todo.isCompleted) {
+        count++;
+      }
+    });
+
+    $todoCount.innerHTML = `
+    <h3>${count} / ${this.state.length} </h3>
+    `;
   };
+
   this.render();
 }
 
-//App.js에서 this.state 만들기
-//
+/**App.js에서 this.state 만들기
+ *this.state에서 isCompleted 개수 세기
+ *initialState로 받아서 화면에 표시하기
+ */
