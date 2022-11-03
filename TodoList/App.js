@@ -2,7 +2,7 @@
 import Header from "./Header.js";
 import TodoForm from "./TodoForm.js";
 import TodoList from "./TodoList.js";
-import { setItem } from "./storage.js";
+import { getItem, setItem } from "./storage.js";
 import TodoCount from "./TodoCount.js";
 
 export default function App({ $target, initialState }) {
@@ -35,6 +35,7 @@ export default function App({ $target, initialState }) {
       console.log(todoList.state);
       const newTodo = [...todoList.state, nextState];
       todoList.setState(newTodo);
+      todoCount.setState(newTodo);
       // const newTodo = [...this.state.todos, nextState];
       // console.log(this.state.todos);
       // this.setState({
@@ -53,12 +54,13 @@ export default function App({ $target, initialState }) {
       const toggleTodo = todoList.state.findIndex(
         (todo) => todo.id === parseInt(id, 10)
       );
-      console.log(toggleTodo);
       const nextState = [...todoList.state];
 
       nextState[toggleTodo].isCompleted = !nextState[toggleTodo].isCompleted;
 
       todoList.setState(nextState);
+      todoCount.setState(nextState);
+      setItem("todos", nextState);
     },
     onRemove: (e, id) => {
       const li = e.target.parentElement;
@@ -70,11 +72,13 @@ export default function App({ $target, initialState }) {
 
       setItem("todos", nextState);
       todoList.setState(nextState);
+      todoCount.setState(nextState);
     },
   });
 
-  new TodoCount({
+  const todoCount = new TodoCount({
     $target,
-    initialState,
+    initialState: todoList.state,
   });
+  //새로고침해야 적용되는 상태
 }
