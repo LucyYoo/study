@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/dbbf49c29e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>YouTube</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__menu">
+        <i class="header__menu--bar fa fa-thin fa-bars"></i>
+        <img
+          class="header__logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/d/dd/YouTube_Premium_logo.svg"
+        />
+      </div>
+      <div class="header__search">
+        <div class="search">
+          <div class="search__form">
+            <input class="search__form--input" />
+            <!-- <i
+              class="search__form--keyboard fa fa-sharp fa-solid fa-keyboard"
+            ></i> -->
+            <button type="button" class="search__form--button">
+              <i class="fa fa-light fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <button type="button" class="search__voice">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+        </div>
+      </div>
+      <div class="header__user">
+        <div class="user">
+          <i class="user--icon fa-solid fa-video"></i>
+          <i class="user--icon fa-regular fa-bell"></i>
+          <img
+            class="user--img"
+            src="./img/profile/userProfile.jpg"
+            alt="유저이미지"
+          />
+        </div>
+      </div>
+    </header>
+    <aside class="aside">
+      <div class="aside__menu">
+        <ul>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-house"></i>
+            <p class="aside__list--text">홈</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-play"></i>
+            <p class="aside__list--text">Shorts</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-photo-film"></i>
+            <p class="aside__list--text">구독</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-brands fa-youtube"></i>
+            <p class="aside__list--text">Originals</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-circle-play"></i>
+            <p class="aside__list--text">YouTube Music</p>
+          </li>
+        </ul>
+      </div>
+      <div class="aside__record">
+        <ul>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-camera-retro"></i>
+            <p class="aside__list--text">보관함</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-regular fa-clock"></i>
+            <p class="aside__list--text">시청기록</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-tv"></i>
+            <p class="aside__list--text">내 동영상</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-clock"></i>
+            <p class="aside__list--text">시청 기록</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-regular fa-thumbs-up"></i>
+            <p class="aside__list--text">좋아요 표시한 동영상</p>
+          </li>
+        </ul>
+      </div>
+      <div class="aside__subscribe">
+        <p>구독</p>
+        <ul>
+          <li class="aside__list">
+            <img
+              class="aside__list--img"
+              src="./img/profile/subProfile1.jpg"
+              alt="강아지구독프로필"
+            />
+            <p class="aside__list--text">가을이</p>
+          </li>
+          <li class="aside__list">
+            <img
+              class="aside__list--img"
+              src="./img/profile/subProfile2.jpg"
+              alt="고양이구독프로필"
+            />
+            <p class="aside__list--text">고양이</p>
+          </li>
+          <li class="aside__list">
+            <img
+              class="aside__list--img"
+              src="./img/profile/subProfile3.jpg"
+              alt="노래구독프로필"
+            />
+            <p class="aside__list--text">노래</p>
+          </li>
+          <li class="aside__list">
+            <img
+              class="aside__list--img"
+              src="./img/profile/subProfile4.jpg"
+              alt="해쭈프로필"
+            />
+            <p class="aside__list--text">해쭈</p>
+          </li>
+        </ul>
+      </div>
+      <div class="aside__quest">
+        <p>탐색</p>
+        <ul>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-fire-flame-curved"></i>
+            <p class="aside__list--text">인기 급상승</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-music"></i>
+            <p class="aside__list--text">음악</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-film"></i>
+            <p class="aside__list--text">영화</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-gamepad"></i>
+            <p class="aside__list--text">게임</p>
+          </li>
+        </ul>
+      </div>
+      <div class="asdie__setting">
+        <ul>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-gear"></i>
+            <p class="aside__list--text">설정</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-regular fa-flag"></i>
+            <p class="aside__list--text">신고 기록</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-regular fa-circle-question"></i>
+            <p class="aside__list--text">고객센터</p>
+          </li>
+          <li class="aside__list">
+            <i class="aside__list--icon fa-solid fa-circle-exclamation"></i>
+            <p class="aside__list--text">의견 보내기</p>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main class="main">
+      <nav class="main__category">
+        <ul class="category">
+          <li class="category__item category__item--tatal">전체</li>
+          <li class="category__item">게임</li>
+          <li class="category__item">실시간</li>
+          <li class="category__item">음악</li>
+          <li class="category__item">포켓몬</li>
+        </ul>
+      </nav>
+      <section class="main__video">
+        <ul class="video">
+          <li class="video__list">
+            <img
+              class="video__list--thumbnail"
+              src="./img/thumbnail/thumbnail1.webp"
+              alt="썸네일"
+            />
+            <hgroup class="video__group">
+              <img
+                class="video__group--profile"
+                src="./img/profile/subProfile4.jpg"
+                alt="프로필"
+              />
+              <div class="video__group--info">
+                <p class="video__group--title">유튜브 동영상 제목</p>
+                <p class="video__group--auth">해쭈</p>
+                <div class="video__group--quest">
+                  <p class="video__group--watch">100만회</p>
+                  <p class="video__group--time">3시간 전</p>
+                </div>
+              </div>
+            </hgroup>
+          </li>
+          <li class="video__list">
+            <img
+              class="video__list--thumbnail"
+              src="./img/thumbnail/thumbnail2.webp"
+              alt="썸네일"
+            />
+            <hgroup>
+              <img
+                class="video__list--profile"
+                src="./img/profile/subProfile3.jpg"
+                alt="프로필"
+              />
+              <div class="video__list--info">
+                <p class="video__list--title">유튜브 동영상 제목</p>
+                <p class="video__list--auth">노래</p>
+                <div class="video__list--quest">
+                  <p class="video__list--watch">100만회</p>
+                  <p class="video__list--time">3시간 전</p>
+                </div>
+              </div>
+            </hgroup>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__shorts">
+        <ul class="shorts">
+          <p class="shorts__title">
+            <i class="fa-solid fa-camera"></i>
+            Shorts
+          </p>
+          <li class="shorts__list">
+            <img
+              class="shorts__list--thumbnail"
+              src="./img/shorts/shorts1.webp"
+              alt="쇼츠썸네일"
+            />
+            <p class="shorts__list--title">쇼츠 제목</p>
+            <p class="shorts__list--watch">10만회</p>
+          </li>
+          <li class="shorts__list">
+            <img
+              class="shorts__list--thumbnail"
+              src="./img/shorts/shorts1.webp"
+              alt="쇼츠썸네일"
+            />
+            <p class="shorts__list--title">쇼츠 제목</p>
+            <p class="shorts__list--watch">10만회</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__video"><!--동영상--></section>
+    </main>
+  </body>
+</html>
